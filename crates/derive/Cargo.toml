@@ -1,0 +1,31 @@
+[package]
+name = "eventwise-derive"
+version = "0.1.0"
+edition = "2024"
+
+[lib]
+proc-macro = true
+
+[dependencies]
+convert_case = "0.12.0"
+darling = "0.24.1"
+itertools = "0.15.0"
+proc-macro2 = "1.0.107"
+quote = "1.0.47"
+syn = { version = "3.0.6", features = ["full", "extra-traits", "printing"] }
+uuid.workspace = true
+
+[dev-dependencies]
+syn2 = { package = "syn", version = "2", features = [
+    "full",
+    "derive",
+    "parsing",
+    "visit",
+    "extra-traits",
+] }
+glob = "0.3.4"
+macrotest = "1.2.1"
+runtime-macros = "1.1.1"
+eventwise = { path = "../.." }
+serde.workspace = true
+thiserror.workspace = true
