@@ -1,0 +1,12 @@
+[package]
+name = "eventwise-core"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+async-trait = { workspace = true }
+chrono = { workspace = true }
+serde = { workspace = true, features = ["derive"] }
+thiserror.workspace = true
+tokio = { version = "1.53.1", features = ["full"] }
+uuid = { workspace = true }

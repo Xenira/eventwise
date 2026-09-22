@@ -1,0 +1,18 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "\n                INSERT INTO events (aggregate_kind, aggregate_id, sequence, event_kind, data)\n                VALUES ($1, $2, $3, $4, $5)\n                ",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Left": [
+        "Text",
+        "Uuid",
+        "Int8",
+        "Text",
+        "Json"
+      ]
+    },
+    "nullable": []
+  },
+  "hash": "c34098a2559559ddc07d210c738b1f0382417b419ece9e775263503369dcb014"
+}

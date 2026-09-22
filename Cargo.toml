@@ -1,0 +1,27 @@
+[workspace]
+resolver = "2"
+members = [
+    "crates/*",
+]
+
+[package]
+name = "eventwise"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+eventwise-core = { path = "crates/core" }
+eventwise-derive = { path = "crates/derive", optional = true }
+eventwise-postgres = { path = "crates/postgres", optional = true }
+
+[workspace.dependencies]
+async-trait = "0.1.92"
+chrono = "0.4.45"
+serde = "1.0.229"
+thiserror = "2.0.20"
+uuid = "1.26.1"
+
+[features]
+default = ["derive"]
+derive = ["eventwise-derive"]
+postgres = ["eventwise-postgres"]
